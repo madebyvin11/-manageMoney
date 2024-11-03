@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengatur Uang Jajan</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pengatur Uang Jajan</h1>
+    
+    <div class="balance">
+      <h2>Saldo Tersisa: <span id="balance">Rp 0</span></h2>
+    </div>
+    
+    <div class="container">
+        <h1>Pengatur Uang Jajan</h1>
+        <div>
+            <h2>Saldo: <span id="balance">Rp 0</span></h2>
+        </div>
+        <form id="transaction-form">
+            <input type="text" id="description" placeholder="Deskripsi" required>
+            <input type="number" id="amount" placeholder="Jumlah" required>
+            <select id="category">
+                <option value="income">Pemasukan</option>
+                <option value="expense">Pengeluaran</option>
+            </select>
+            <button type="submit">Tambah Transaksi</button>
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Deskripsi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="transactions"></tbody>
+        </table>
+    
+        <div class="bills">
+            <h2>Tagihan yang Harus Dibayar</h2>
+            <form id="bill-form">
+                <input type="text" id="bill-description" placeholder="Tagihan" required>
+                <input type="number" id="bill-amount" placeholder="Jumlah" required>
+                <button type="submit">Tambah Tagihan</button>
+            </form>
+            <ul id="bills-list"></ul>
+        </div>
+    </div>
+    
+
+
+  <script src="Script.js"></script>
+</body>
+</html>
